@@ -31,6 +31,11 @@ Route::group(['middleware' => 'auth'], function()
 	{
 	       return View('users.dashboard')->with('auth', true);
 	}));
+
+    Route::get('markten', array('as'=>'dashboard', function()
+	{
+	       return View('users.markten')->with('auth', true);
+	}));
 });
 
 return view('errors.404');
