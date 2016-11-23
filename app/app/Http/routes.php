@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function()
 
     Route::get('dashboard', array('as'=>'dashboard', function()
 	{
-	       return View('users.dashboard');
+	       return View('dashboard')->with('auth', true);
 	}));
 });
 

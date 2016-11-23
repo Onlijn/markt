@@ -31,7 +31,11 @@
                 <ul class="nav navbar-nav">
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
-                    <li><a href="/logout">log uit</a></li>
+                    @if ($auth)
+                        <li><a href="/logout">log uit</a></li>
+                    @else
+                        <li><a href="/login">inloggen</a></li>
+                    @endif
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
