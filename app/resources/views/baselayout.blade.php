@@ -3,8 +3,9 @@
     <head>
         <title>@yield('title')</title>
 
-        <!-- {!! Html::style('css/app.css') !!}
-        {!! Html::style('css/style.css') !!}
+        {!! Html::style('css/app.css') !!}
+        <link rel="stylesheet" href="/style.css">
+        <!-- {!! Html::style('css/style.css') !!}
 
         {!! Html::script('js/jquery.min.js') !!}
         {!! Html::script('js/bootstrap.min.js') !!}
