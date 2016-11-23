@@ -43,7 +43,7 @@
     </nav>
 
     <body>
-        <div class="container-fluid content">
+        <div class="container-fluid">
             @yield('content')
         </div><!-- /.container -->
     </body>
