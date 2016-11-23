@@ -33,4 +33,4 @@ Route::group(['middleware' => 'auth'], function()
 	}));
 });
 
-return view('welcome');
+return view('errors.404');
