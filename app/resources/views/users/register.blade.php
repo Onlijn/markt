@@ -13,7 +13,7 @@
         <br>
         {!! Html::ul($errors->all(), array('class'=>'errors')) !!}
 
-        {!! Form::open(array('url' => 'users/register','class'=>'form')) !!}
+        {!! Form::open(array('url' => 'register','class'=>'form')) !!}
 
         <br>{!! Form::label('name', 'Username') !!}
         {!! Form::text('name', null, array('class' => 'form-control','placeholder' => 'kenny')) !!}
@@ -33,4 +33,3 @@
 </div>
 
 @stop
-	
