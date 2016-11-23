@@ -20,11 +20,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">Direct events</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="">Home</a></li>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/markten">Markten</a></li>
                     @if ($auth)
                         <li><a href="/logout">log uit</a></li>
                     @else
