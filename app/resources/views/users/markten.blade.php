@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="col-sm-3 col-md-2 sidebar" style="position: absolute;">
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Kerstmarkt Vinkeveen</a></li>
