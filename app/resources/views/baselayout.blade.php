@@ -31,7 +31,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
-                    <li><a href="">Item</a></li>
+                    <li><a href="/logout">log uit</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
