@@ -74,22 +74,22 @@ class AuthController extends Controller
 
     /* Login get post methods */
     protected function getLogin() {
-        return View('users.login');
+        return View('users.login')->with('auth', false);
     }
 
     protected function postLogin(LoginRequest $request) {
         if ($this->auth->attempt($request->only('email', 'password'))) {
-            return redirect()->route('dashboard');
+            return redirect()->route('dashboard')->with('auth', true);
         }
 
         return redirect('login')->withErrors([
             'email' => 'The email or the password is invalid. Please try again.',
-        ]);
+        ])->with('auth', false);
     }
 
     /* Register get post methods */
     protected function getRegister() {
-        return View('users.register');
+        return View('users.register')->with('auth', true);
     }
 
     protected function postRegister(RegisterRequest $request) {
@@ -97,7 +97,7 @@ class AuthController extends Controller
         $this->user->email = $request->email;
         $this->user->password = bcrypt($request->password);
         $this->user->save();
-        return redirect('login');
+        return redirect('register')->with('auth', true);
     }
 
     /**
@@ -108,6 +108,6 @@ class AuthController extends Controller
     protected function getLogout()
     {
         $this->auth->logout();
-        return redirect('login');
+        return redirect('login')->with('auth', false);
     }
 }
