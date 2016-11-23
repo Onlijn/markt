@@ -82,7 +82,7 @@ class AuthController extends Controller
             return redirect()->route('dashboard');
         }
 
-        return redirect('users/login')->withErrors([
+        return redirect('login')->withErrors([
             'email' => 'The email or the password is invalid. Please try again.',
         ]);
     }
@@ -97,7 +97,7 @@ class AuthController extends Controller
         $this->user->email = $request->email;
         $this->user->password = bcrypt($request->password);
         $this->user->save();
-        return redirect('users/login');
+        return redirect('login');
     }
 
     /**
@@ -108,6 +108,6 @@ class AuthController extends Controller
     protected function getLogout()
     {
         $this->auth->logout();
-        return redirect('users/login');
+        return redirect('login');
     }
 }
