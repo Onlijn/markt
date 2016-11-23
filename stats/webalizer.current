@@ -1,0 +1,278 @@
+# Webalizer V2.21-02 Incremental Data - 11/22/2016 21:40:38
+2016 11 22 21 40 38
+77 50 27 5 9 20 154606 41 34 0
+5 3 7 1 22
+2 2 756 1 2 1
+2 1 872 1 1 1
+8 6 19420 2 4 3
+0 0 0 0 0 0
+0 0 0 0 0 0
+3 2 10165 1 1 1
+3 2 10165 1 1 1
+4 2 1246 3 3 3
+8 7 29878 4 4 4
+0 0 0 0 0 0
+2 2 756 1 2 1
+0 0 0 0 0 0
+3 2 10165 1 1 1
+5 2 11153 1 3 1
+1 0 0 1 1 1
+2 1 868 2 1 1
+2 1 868 1 1 1
+5 3 11033 3 2 2
+4 2 1740 3 2 2
+2 1 868 2 1 1
+12 9 23459 5 7 5
+9 5 21194 5 4 4
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+1 0 0 1
+2 1 868 1
+1 1 378 1
+2 1 868 1
+0 0 0 0
+2 1 868 1
+0 0 0 0
+2 2 9670 1
+8 5 11789 5
+8 4 11905 4
+3 2 10165 1
+2 1 868 1
+4 2 1740 2
+2 1 868 1
+3 2 10165 1
+4 3 9113 2
+5 2 11153 3
+0 0 0 0
+4 3 10307 2
+0 0 0 0
+11 9 40043 5
+13 10 23838 8
+0 0 0 0
+0 0 0 0
+0
+0
+0
+50
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+3
+0
+0
+0
+0
+0
+0
+23
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/
+0 36 0 13224 32 6
+/games/bejeweld2/jquery.touchSwipe.min.js
+0 1 0 5048 0 0
+/games/bejeweld2/
+0 2 0 284 1 2
+/logo.png
+0 13 0 120796 0 0
+/games/bejeweld2/script.js
+0 1 0 3593 0 0
+# End Of Table - urls
+# -sites- (monthly)
+ip565c2340.direct-adsl.nl
+0 2 2 9670 1 1479764911
+/
+31.13.102.108
+0 1 0 0 1 1478564794
+/
+d97ad71e.cm-3-3d.dynamic.ziggo.nl
+0 3 2 10165 1 1478161488
+/
+a15161.upc-a.chello.nl
+0 3 2 10165 1 1478427972
+/
+6-202-144-85.ftth.glasoperator.nl
+0 2 2 9670 1 1479758581
+/
+crawl-66-249-66-245.googlebot.com
+0 1 1 378 1 1479693098
+/
+62.72.192.66
+0 2 2 9670 1 1478724374
+/
+ip4da458ab.direct-adsl.nl
+0 1 1 378 1 1478638833
+/
+s559438f1.adsl.online.nl
+0 3 2 10165 1 1478509935
+/
+dhcp-077-251-163-034.chello.nl
+0 5 2 11153 1 1479142398
+-
+crawl-66-249-66-249.googlebot.com
+0 5 4 2002 4 1479816265
+/
+crawl-66-249-66-28.googlebot.com
+0 1 1 378 1 1479448579
+/
+crawl-66-249-66-253.googlebot.com
+0 3 0 1470 0 0
+-
+ip-212-178-50-5.ip.prioritytelecom.net
+0 3 2 10165 1 1479838495
+/
+emap-01.sidnlabs.nl
+0 4 4 1512 2 1478899113
+/
+crawl-66-249-66-25.googlebot.com
+0 3 1 1358 1 1479382060
+/
+143.179.21.195
+0 2 2 9670 1 1478724409
+/
+ip-213-127-153-35.ip.prioritytelecom.net
+0 3 2 10165 1 1479477809
+/
+crawl-66-249-64-118.googlebot.com
+0 5 2 2226 2 1478682430
+/
+92-111-111-20.static.chello.nl
+0 3 2 10161 1 1479850837
+/
+static.kpn.net
+0 7 6 18925 3 1478677921
+/
+crawl-66-249-64-126.googlebot.com
+0 1 1 378 1 1479327844
+/
+www.whois.sc
+0 4 2 1744 2 1479558756
+/
+66.220.152.176
+0 1 0 0 1 1479199785
+/
+66.220.152.185
+0 1 0 0 1 1479806009
+/
+dhcp-077-249-149-106.chello.nl
+0 3 2 10165 1 1479067584
+/
+spider-4.lipperhey.com
+0 5 3 2873 1 1479763246
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+crawl-66-249-66-249.googlebot.com
+0 1 1 378 1 1479816265
+/
+crawl-66-249-66-253.googlebot.com
+0 1 0 490 0 0
+-
+ip-212-178-50-5.ip.prioritytelecom.net
+0 3 2 10165 1 1479838495
+/
+92-111-111-20.static.chello.nl
+0 3 2 10161 1 1479850837
+/
+66.220.152.185
+0 1 0 0 1 1479806009
+/
+# End Of Table - sites (daily)
+# -referrers- 
+- (Direct Request)
+0 42
+http://m.facebook.com
+0 5
+http://m.facebook.com/
+0 3
+http://www.directevenementen.nl/
+0 18
+https://www.facebook.com/
+0 2
+http://www.directevenementen.nl/games/bejeweld2/
+0 2
+http://l.facebook.com/l.php
+0 1
+http://directevenementen.nl/
+0 2
+http://whois.domaintools.com/directevenementen.nl
+0 2
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en; rv:1.9.0.13) Gecko/2009073022 Firefox/3.5.2 (.NET CLR 3.5.30729) SurveyBot/2.3 (
+0 4
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 [FBAN/FBIOS;F
+0 8
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FSL 7.0.5.01003)
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14
+0 3
+Mozilla/5.0 (Linux; Android 6.0.1; SM-G935F Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/54.0.
+0 6
+Mozilla/5.0 (Linux; Android 4.05; Galaxy Nexus Build/IMM76B) AppleWebKit/535.25 (KHTML, like Gecko) Chrome/17.0.1025.133 Mobi
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36
+0 3
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+0 11
+facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
+0 3
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile S
+0 8
+Mozilla/4.0 (compatible; MSIE 6.0; MSIE 5.5; Windows NT 5.0) Opera 7.02 Bork-edition [en]
+0 1
+Mozilla/5.0 (Linux; Android 6.0.1; SM-G920F Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/54.0.
+0 3
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FSL 7.0.6.01001)
+0 1
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36
+0 5
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13F69 [FBAN/FBIOS;FBA
+0 2
+Mozilla/5.0 (compatible; Dataprovider; https://www.dataprovider.com/spider/)
+0 4
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0.1 Safari/602.2.14
+0 3
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Sa
+0 6
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+0 3
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames
