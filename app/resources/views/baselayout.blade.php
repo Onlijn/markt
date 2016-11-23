@@ -4,13 +4,7 @@
         <title>@yield('title')</title>
 
         {!! Html::style('css/app.css') !!}
-        <link rel="stylesheet" href="/style.css">
-        <!-- {!! Html::style('css/style.css') !!}
 
-        {!! Html::script('js/jquery.min.js') !!}
-        {!! Html::script('js/bootstrap.min.js') !!}
-
-        Bootstrap and jquery cdn - Uncomment this to use CDN.-->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -31,7 +25,6 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
                     @if ($auth)
                         <li><a href="/logout">log uit</a></li>
                     @else
@@ -43,7 +36,7 @@
     </nav>
 
     <body>
-        <div class="container">
+        <div class="container content">
             @yield('content')
         </div><!-- /.container -->
     </body>
