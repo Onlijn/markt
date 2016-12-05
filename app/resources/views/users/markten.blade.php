@@ -9,8 +9,8 @@
                 var $id = $(this).find("a").data("id");
 
                 $.post({
-                    "getStandhouderForMarkt",
-                    { id: $id }
+                    url: "getStandhouderForMarkt",
+                    data: { id: $id }
                 })
                 .done(function(data){
                     console.log("done");
