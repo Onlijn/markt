@@ -7,21 +7,27 @@
         $(document).ready(function(){
             $(".markt-item").on("click", function(){
                 var $id = $(this).find("a").data("id");
+                var $data = { _token: "{{ csrf_token() }}", id: $id };
+                console.log($data);
 
                 $.post({
                     type: "POST",
-                    url: "getStandhouderForMarkt.php",
+                    url: "getStandhouderForMarkt",
                     dataType: "json",
-                    data: { _token: "{{ csrf_token() }}", id: $id }
+                    data: $data
                 })
                 .done(function(data){
                     console.log("done");
+                    console.log($data);
                     console.log(data);
                 })
                 .fail(function(data){
                     console.log("fail");
+                    console.log($data);
                     console.log(data);
                 });
+
+                // $.post( "getStandhouderForMarkt", { id: $id, _token: "{{ csrf_token() }}" } );
             });
         });
     </script>
