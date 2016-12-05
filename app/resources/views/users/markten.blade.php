@@ -10,7 +10,7 @@
 
                 $.post({
                     type: "POST",
-                    url: "getStandhouderForMarkt",
+                    url: "getStandhouderForMarkt.php",
                     dataType: "json",
                     data: { _token: "{{ csrf_token() }}", id: $id }
                 })
