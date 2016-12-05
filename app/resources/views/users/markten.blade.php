@@ -8,7 +8,7 @@
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                 @foreach ($markten as $markt)
-                    <li><a href="#">$markt->Naam</a></li>
+                    <li><a href="#">{{ $markt->Naam }}</a></li>
                 @endforeach
 
                 <li><a href="#">Analytics</a></li>
