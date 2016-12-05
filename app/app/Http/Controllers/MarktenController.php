@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Http\Controllers\Controller;
 use App\Models\Markt as Markt;
+use App\Http\Controllers\Controller;
 
 class MarktenController extends Controller
 {
