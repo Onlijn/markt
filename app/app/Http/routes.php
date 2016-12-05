@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function()
 	       return View('users.dashboard');
 	}));
 
-    Route::get('markten', 'App\Http\Controllers\MarktenController@getIndex');
+    Route::get('markten', 'MarktenController@getIndex');
 });
 
 return view('errors.404');
