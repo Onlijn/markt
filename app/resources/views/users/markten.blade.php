@@ -13,7 +13,6 @@
                 $.post({
                     type: "POST",
                     url: "getStandhouderForMarkt",
-                    dataType: "json",
                     data: $data
                 })
                 .done(function(data){
