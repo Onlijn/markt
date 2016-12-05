@@ -27,6 +27,7 @@ class MarktenController extends Controller
     public function getStandhouderTableJSON(Request $request)
     {
         $json = Standhouder::getStandhoudersForMarkt($request->input("markt_id"));
-        return $json;
+        echo $json;
+        echo "<br> test";
     }
 }
