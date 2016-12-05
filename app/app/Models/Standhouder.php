@@ -30,7 +30,7 @@ class Standhouder extends Model
      */
     public function getStandhoudersForMarkt($markt_id)
     {
-        return $this->markten->where("id", 1);
+        return $this->markten->where("id", $markt_id)->toJson();
     }
 
 }

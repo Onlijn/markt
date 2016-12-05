@@ -2,13 +2,36 @@
 
 @section('title') Markten @stop
 
+@section('bottom')
+    <script>
+        $(document).ready(function(){
+            $(".markt-item").on("click", function(){
+                var $id = $(this).find("a").data("id");
+
+                $.post({
+                    "/getStandhouderForMarkt",
+                    { id: $id }
+                })
+                .done(function(data){
+                    console.log("done");
+                    console.log(data);
+                })
+                .fail(function(data){
+                    console.log("fail");
+                    console.log(data);
+                });
+            });
+        });
+    </script>
+@stop
+
 @section('content')
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar" style="position: absolute;">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                <li class="markt-item active"><a data-id="0" href="#">Overview <span class="sr-only">(current)</span></a></li>
                 @foreach ($markten as $markt)
-                    <li><a data-id="{{ $markt->id }}" href="#">{{ $markt->Naam }}</a></li>
+                    <li class="markt-item"><a data-id="{{ $markt->id }}" href="#">{{ $markt->Naam }}</a></li>
                 @endforeach
             </ul>
         </div>

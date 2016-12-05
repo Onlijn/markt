@@ -46,5 +46,7 @@
         <div class="container-fluid content">
             @yield('content')
         </div><!-- /.container -->
+
+        @yield('bottom')
     </body>
 </html>

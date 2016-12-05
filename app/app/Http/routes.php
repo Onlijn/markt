@@ -24,6 +24,7 @@ Route::get('logout', 'Auth\AuthController@getLogout');
 /* Authenticated users */
 Route::group(['middleware' => 'auth'], function()
 {
+    // Register
     Route::get('register', 'Auth\AuthController@getRegister');
     Route::post('register', 'Auth\AuthController@postRegister');
 
@@ -33,6 +34,9 @@ Route::group(['middleware' => 'auth'], function()
 	}));
 
     Route::get('markten', 'MarktenController@getIndex');
+
+    // API calls
+    Route::post('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
 });
 
 return view('errors.404');
