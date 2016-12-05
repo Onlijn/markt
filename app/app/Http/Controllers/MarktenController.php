@@ -26,7 +26,9 @@ class MarktenController extends Controller
      */
     public function getStandhouderTableJSON(Request $request)
     {
-        $json = Standhouder::getStandhoudersForMarkt($request->input("markt_id"));
-        return $json . "<br> test";
+        $markten = Markt::orderBy('datum', 'desc')->get();
+        return View('users.markten')->with('markten', $markten);
+        // $json = Standhouder::getStandhoudersForMarkt($request->input("markt_id"));
+        // return $json . "<br> test";
     }
 }
