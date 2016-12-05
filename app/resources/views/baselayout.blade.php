@@ -32,7 +32,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/dashboard">Home</a></li>
                     <li><a href="/markten">Markten</a></li>
-                    @if ($auth)
+                    @if (Auth::check())
                         <li><a href="/logout">log uit</a></li>
                     @else
                         <li><a href="/login">inloggen</a></li>

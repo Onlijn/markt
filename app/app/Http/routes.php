@@ -29,13 +29,10 @@ Route::group(['middleware' => 'auth'], function()
 
     Route::get('dashboard', array('as'=>'dashboard', function()
 	{
-	       return View('users.dashboard')->with('auth', true);
+	       return View('users.dashboard');
 	}));
 
-    Route::get('markten', array('as'=>'dashboard', function()
-	{
-	       return View('users.markten')->with('auth', true);
-	}));
+    Route::get('markten', 'App\Http\Controllers\MarktenController@getIndex');
 });
 
 return view('errors.404');
