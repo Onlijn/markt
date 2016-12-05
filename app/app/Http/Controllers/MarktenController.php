@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Markt as Markt;
 use App\Http\Controllers\Controller;
 
 class MarktenController extends Controller
@@ -14,7 +13,7 @@ class MarktenController extends Controller
      */
     public function getIndex()
     {
-        $markten = Markt::orderBy('datum', 'desc')->get();
+        $markten = App\Models\Markt::orderBy('datum', 'desc')->get();
         return View('users.markten')->with('markten', $markten);
     }
 }
