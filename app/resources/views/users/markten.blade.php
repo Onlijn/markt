@@ -10,7 +10,7 @@
 
                 $.post({
                     url: "getStandhouderForMarkt",
-                    data: { _token: {{ csrf_token() }}, id: $id }
+                    data: { _token: "{{ csrf_token() }}", id: $id }
                 })
                 .done(function(data){
                     console.log("done");
