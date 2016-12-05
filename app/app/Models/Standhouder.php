@@ -25,4 +25,12 @@ class Standhouder extends Model
                                     'standhouder_id', 'id', 'id');
     }
 
+    /**
+     * Gets all the standhouders for markt
+     */
+    public function getStandhoudersForMarkt($markt_id)
+    {
+        return $this->markten->where("id", 1);
+    }
+
 }
