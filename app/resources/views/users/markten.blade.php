@@ -9,7 +9,9 @@
                 var $id = $(this).find("a").data("id");
 
                 $.post({
+                    type: "POST",
                     url: "getStandhouderForMarkt",
+                    dataType: "json",
                     data: { _token: "{{ csrf_token() }}", id: $id }
                 })
                 .done(function(data){
