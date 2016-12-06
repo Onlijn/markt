@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Markt as Markt;
 use App\Models\Standhouder as Standhouder;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 
 class MarktenController extends Controller
 {
