@@ -11,12 +11,6 @@
 |
 */
 
-Route::post('getStandhoudersForMarkt', function () {
-    return view('welcome');
-});
-Route::get('getStandhoudersForMarkt', function () {
-    return view('welcome');
-});
 Route::get('/', function () {
     return view('welcome');
 });
@@ -42,6 +36,8 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('markten', 'MarktenController@getIndex');
 
     // API calls
+    Route::post('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
+    Route::get('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
 });
 
 return view('errors.404');

@@ -12,7 +12,7 @@
 
                 $.post({
                     type: "POST",
-                    url: "getStandhouderForMarkt",
+                    url: "getStandhoudersForMarkt",
                     data: $data
                 })
                 .done(function(data){
