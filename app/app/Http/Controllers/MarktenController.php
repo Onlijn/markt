@@ -25,7 +25,7 @@ class MarktenController extends Controller
      *
      * @return Response
      */
-    public static function getStandhouderTableJSON(Request $request)
+    public function getStandhouderTableJSON(Request $request)
     {
         // $markten = Markt::orderBy('datum', 'desc')->get();
         // return View('users.markten')->with('markten', $markten);
