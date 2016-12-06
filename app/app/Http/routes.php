@@ -11,8 +11,12 @@
 |
 */
 
-Route::post('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
-Route::get('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
+Route::post('getStandhoudersForMarkt', function () {
+    return view('welcome');
+});
+Route::get('getStandhoudersForMarkt', function () {
+    return view('welcome');
+});
 Route::get('/', function () {
     return view('welcome');
 });
