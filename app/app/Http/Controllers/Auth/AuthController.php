@@ -79,7 +79,7 @@ class AuthController extends Controller
 
     protected function postLogin(LoginRequest $request) {
         if ($this->auth->attempt($request->only('email', 'password'))) {
-            return redirect()->route('dashboard')->with('auth', true);
+            return redirect()->route('dashboard');
         }
 
         return redirect('login')->withErrors([
