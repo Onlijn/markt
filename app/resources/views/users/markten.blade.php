@@ -8,7 +8,6 @@
             $(".markt-item").on("click", function(){
                 var $id = $(this).find("a").data("id");
                 var $data = { _token: "{{ csrf_token() }}", id: $id };
-                console.log($data);
 
                 $.post({
                     type: "POST",
@@ -17,13 +16,25 @@
                 })
                 .done(function(data){
                     console.log("done");
-                    console.log($data);
-                    console.log(data);
+                    $(".standhouders-table tbody").empty();
+                    $standhouders = data.standhouders;
+                    $html = '';
+                    for(var i = 0;i < $standhouders.length; i++)
+                    {
+                        $html += "<tr>";
+                        $html += "<td>"+ $standhouders[i].id +"</td>";
+                        $html += "<td>"+ $standhouders[i].Bedrijfsnaam +"</td>";
+                        $html += "<td>"+ $standhouders[i].Voornaam + " " + $standhouders[i].Achternaam +"</td>";
+                        $html += "<td>"+ $standhouders[i].Telefoon +"</td>";
+                        $html += "<td>"+ $standhouders[i].Email +"</td>";
+                        $html += "<td>"+ $standhouders[i].Website +"</td>";
+                        $html += "</tr>";
+                    }
+
+                    $(".standhouders-table tbody").append($html);
                 })
                 .fail(function(data){
                     console.log("fail");
-                    console.log($data);
-                    console.log(data);
                 });
 
                 // $.post( "getStandhouderForMarkt", { id: $id, _token: "{{ csrf_token() }}" } );
@@ -70,31 +81,18 @@
 
             <h2 class="sub-header">Standhouders</h2>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped standhouders-table">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
+                            <th>Bedrijfsnaam</th>
+                            <th>Naam</th>
+                            <th>Telefoon</th>
+                            <th>E-mail</th>
+                            <th>Website</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1,001</td>
-                            <td>Lorem</td>
-                            <td>ipsum</td>
-                            <td>dolor</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>1,002</td>
-                            <td>amet</td>
-                            <td>consectetur</td>
-                            <td>adipiscing</td>
-                            <td>elit</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

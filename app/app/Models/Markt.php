@@ -21,7 +21,7 @@ class Markt extends Model
      */
     public function standhouders()
     {
-        return $this->hasManyThrough('App\Models\Standhouder', 'App\Models\Koppel_standhouders_markten',
+        return $this->hasManyThrough('Standhouder', 'Koppel_standhouders_markten',
                                     'markt_id', 'id', 'id');
     }
 

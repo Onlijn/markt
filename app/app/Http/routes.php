@@ -34,10 +34,11 @@ Route::group(['middleware' => 'auth'], function()
 	}));
 
     Route::get('markten', 'MarktenController@getIndex');
+    Route::get('markt/{slug}', 'MarktenController@getMarkt');
 
     // API calls
-    Route::post('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
-    Route::get('getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
+    Route::post('markt/getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
+    Route::get('markt/getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');
 });
 
 return view('errors.404');

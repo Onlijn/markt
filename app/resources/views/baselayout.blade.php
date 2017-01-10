@@ -1,3 +1,7 @@
+<?php
+    $markten = App\Models\Markt::orderBy('datum', 'desc')->get();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +19,9 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+        <script>
+
+        </script>
     </head>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -28,11 +35,21 @@
                 </button>
                 <a class="navbar-brand" href="/dashboard">Direct events</a>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div id="navbar" class="main-nav collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/dashboard">Home</a></li>
                     @if (Auth::check())
-                        <li><a href="/markten">Markten</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Markten
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              @foreach ($markten as $markt)
+                                  <li><a href="/markt/{{ $markt->Naam }}">{{ $markt->Naam }}</a></li>
+                              @endforeach
+                            </ul>
+                        </li>
+                    @endif
+                    @if (Auth::check())
                         <li><a href="/logout">log uit</a></li>
                     @else
                         <li><a href="/login">inloggen</a></li>
