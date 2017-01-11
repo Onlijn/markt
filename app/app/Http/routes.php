@@ -20,10 +20,18 @@ Route::get('login', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
+// To show markt page
+Route::get('markt2/{slug}', 'MarktController@getMarkt');
+
+    // External API calls
+    Route::post('aanmelding/markt', 'AanmeldController@postAanmelding');
+    // Route::post('aanmelding/markt', 'Auth\AuthController@postLogin');
+    Route::get('aanmelding/markt', 'AanmeldController@postAanmelding');
 
 /* Authenticated users */
 Route::group(['middleware' => 'auth'], function()
 {
+
     // Register
     Route::get('register', 'Auth\AuthController@getRegister');
     Route::post('register', 'Auth\AuthController@postRegister');

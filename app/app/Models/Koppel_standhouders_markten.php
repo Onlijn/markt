@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Koppel_standhouders_markten extends Model
 {
-    protected $table = "standhouders";
+    protected $table = "koppel_standhouders_markten";
 
 
     /**
@@ -14,7 +14,7 @@ class Koppel_standhouders_markten extends Model
      *
      * @var array
      */
-    protected $fillable = ['markt_id', 'standhouder_id'];
+    protected $fillable = ['markt_id', 'standhouder_id', 'type', 'kraam', 'grondplek', 'bedrag', 'betaald'];
 
 
 
