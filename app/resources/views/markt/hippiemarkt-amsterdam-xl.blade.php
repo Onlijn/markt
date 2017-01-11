@@ -9,7 +9,7 @@
 
 		<!-- STYLES -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="{!! Html::style('assets/style.css') !!}">
+		<link rel="stylesheet" type="text/css" href="{!! Html::style('/assets/style.css') !!}">
 		<!-- <link rel="stylesheet" href="css/bjqs.css"> -->
 
 		<!-- JS -->
