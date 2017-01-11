@@ -21,7 +21,7 @@ Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
 // To show markt page
-Route::get('markt2/{slug}', 'MarktController@getMarkt');
+Route::get('markt/{slug}', 'MarktController@getMarkt');
 
     // External API calls
     Route::post('aanmelding/markt', 'AanmeldController@postAanmelding');
@@ -41,8 +41,8 @@ Route::group(['middleware' => 'auth'], function()
 	       return View('users.dashboard');
 	}));
 
+    Route::get('markten/{slug}', 'MarktenController@getMarkt');
     Route::get('markten', 'MarktenController@getIndex');
-    Route::get('markt/{slug}', 'MarktenController@getMarkt');
 
     // API calls
     Route::post('markt/getStandhoudersForMarkt', 'MarktenController@getStandhouderTableJSON');

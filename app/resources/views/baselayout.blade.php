@@ -44,7 +44,7 @@
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               @foreach ($markten as $markt)
-                                  <li><a href="/markt/{{ $markt->Naam }}">{{ $markt->Naam }}</a></li>
+                                  <li><a href="/markten/{{ $markt->Naam }}">{{ $markt->Naam }}</a></li>
                               @endforeach
                             </ul>
                         </li>
