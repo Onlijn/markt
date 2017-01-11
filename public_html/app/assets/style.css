@@ -1,3 +1,27 @@
 .container {
     margin-top: 51px;
 }
+
+body {
+    background-image: url(../../assets/img/hippiemarkt-amsterdam-xl/bg-with-sun.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.round {
+    background-image: url(../../assets/img/hippiemarkt-amsterdam-xl/round.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: 'League Gothic Condensed';
+}
+
+.datum {
+    font-size: 27px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.form-wrapper { display: none; }
