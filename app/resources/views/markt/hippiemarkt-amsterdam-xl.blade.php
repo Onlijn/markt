@@ -40,9 +40,21 @@
         				},
         				error: function (jXHR, textStatus, errorThrown) {
                             $(".output").html(jXHR);
-                            console.log(jXHR);
-                            alert("textStatus: " + textStatus);
-                            alert("errorThrown: " + errorThrown);
+                            console.log(jXHR.status);
+                            // alert("textStatus: " + textStatus);
+                            // alert("errorThrown: " + errorThrown);
+                            if(jXHR.status == 503)
+                            {
+                                alert("Niet alle velden zijn goed ingevuld");
+                            }
+                            else if (jXHR.status == 404)
+                            {
+                                alert("We konden de opgegeven markt niet vinden. Wij zouden u willen vragen om een e-mail te sturen naar xxx@xxx.nl");
+                            }
+                            else
+                            {
+                                alert("Er is iets fout gegaan. Onze excuses voor het ongemak. Wij zouden u willen vragen om een e-mail te sturen naar xxx@xxx.nl");
+                            }
         					//alert("Er is iets foutgegaan. Herlaad de pagina en probeer opnieuw.\n\nMocht dit probleem zich voor blijven doen stuur dan een e-mail naar ibizamarktabcoude@gmail.com.");
         				}
         			});
@@ -159,7 +171,7 @@
                         <label>Kramen</label>
                     </td>
                     <td>
-                        <input name="kramen" class="field" type="text">
+                        <input name="kramen" class="field" type="number">
                     </td>
                 </tr>
                 <tr class="verkoper">
@@ -167,7 +179,7 @@
                         <label>Grondplekken</label>
                     </td>
                     <td>
-                        <input name="grondplekken" class="field" type="text">
+                        <input name="grondplekken" class="field" type="number">
                     </td>
                 </tr>
                 <tr class="verkoper">
@@ -175,21 +187,21 @@
                         <label>Producten</label>
                     </td>
                     <td>
-                        <input type="checkbox" class="producten" name="producten[0]" value="Grote maten kleding">Grote maten kleding<br>
-                        <input type="checkbox" class="producten" name="producten[1]" value="dameskleding">dameskleding<br>
-                        <input type="checkbox" class="producten" name="producten[2]" value="herenkleding">herenkleding<br>
-                        <input type="checkbox" class="producten" name="producten[3]" value="kinderkleding">kinderkleding<br>
-                        <input type="checkbox" class="producten" name="producten[4]" value="babykleding">babykleding<br>
-                        <input type="checkbox" class="producten" name="producten[5]" value="kledingaccesoires">kledingaccesoires<br>
-                        <input type="checkbox" class="producten" name="producten[6]" value="schoenen">schoenen<br>
-                        <input type="checkbox" class="producten" name="producten[7]" value="lifestyle">lifestyle<br>
-                        <input type="checkbox" class="producten" name="producten[8]" value="woonaccessoires">woonaccessoires<br>
-                        <input type="checkbox" class="producten" name="producten[9]" value="kunst">kunst<br>
-                        <input type="checkbox" class="producten" name="producten[10]" value="sieraden">sieraden<br>
-                        <input type="checkbox" class="producten" name="producten[11]" value="tassen">tassen<br>
-                        <input type="checkbox" class="producten" name="producten[12]" value="brocante">brocante<br>
-                        <input type="checkbox" class="producten" name="producten[13]" value="dierenspullen">dierenspullen<br>
-                        <input type="checkbox" class="producten" name="producten[14]" value="anders">anders
+                        <input type="checkbox" class="producten" name="producten[0]" value="grote-maten">Grote maten kleding<br>
+                        <input type="checkbox" class="producten" name="producten[1]" value="dames-kleding">Dameskleding<br>
+                        <input type="checkbox" class="producten" name="producten[2]" value="heren-kleding">Herenkleding<br>
+                        <input type="checkbox" class="producten" name="producten[3]" value="kinder-kleding">Kinderkleding<br>
+                        <input type="checkbox" class="producten" name="producten[4]" value="baby-kleding">Babykleding<br>
+                        <input type="checkbox" class="producten" name="producten[5]" value="fashion-accesoires">Kledingaccesoires<br>
+                        <input type="checkbox" class="producten" name="producten[6]" value="schoenen">Schoenen<br>
+                        <input type="checkbox" class="producten" name="producten[7]" value="lifestyle">Lifestyle<br>
+                        <input type="checkbox" class="producten" name="producten[8]" value="woon-accessoires">Woonaccessoires<br>
+                        <input type="checkbox" class="producten" name="producten[9]" value="kunst">Kunst<br>
+                        <input type="checkbox" class="producten" name="producten[10]" value="sieraden">Sieraden<br>
+                        <input type="checkbox" class="producten" name="producten[11]" value="tassen">Tassen<br>
+                        <input type="checkbox" class="producten" name="producten[12]" value="brocante">Brocante<br>
+                        <input type="checkbox" class="producten" name="producten[13]" value="dierenspullen">Dierenspullen<br>
+                        <input type="checkbox" class="producten" name="producten[14]" value="anders">Anders
                     </td>
                 </tr>
             </table>

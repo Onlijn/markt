@@ -18,9 +18,6 @@ class AanmeldController extends Controller
      */
     public function postAanmelding(Request $request)
     {
-        // echo "test";
-        // dd($request);
-        // return $request->foodNonfood;
         $required = ['bedrijfsnaam', 'voornaam', 'achternaam', 'straat', 'postcode', 'huisnummer', 'woonplaats', 'telefoon', 'email', 'foodNonfood'];
         $allValues = ['bedrijfsnaam', 'voornaam', 'achternaam', 'straat', 'postcode', 'huisnummer', 'toevoeging', 'woonplaats', 'telefoon', 'email', 'website', 'kramen', 'grondplekken', 'foodNonfood'];
         $arrayedValues = ['producten'];
@@ -28,12 +25,9 @@ class AanmeldController extends Controller
         for($x = 0; $x < count($required); $x++){
             $text = "". $required[$x];
             if(strlen($request->$text) < 2){
-                // return $request->$text;
-                abort(500);
+                abort(503);
             }
         }
-
-
 
         // Standhouder model
         // protected $fillable = ['Bedrijfsnaam', 'Voornaam', 'Achternaam', 'Straat', 'Postcode', 'Huisnummer', 'Toevoeging', 'Woonplaats', 'Telefoon', 'Email', 'Website'];
@@ -53,17 +47,7 @@ class AanmeldController extends Controller
         $standhouder->save();
 
         // get the current markt for signup
-        // return \App\Models\Markt::findOrFail(1)->where('id', $request->markt_id);
-        // return $request->markt_id;
         $markt = Markt::where('id', $request->markt_id)->firstOrFail();
-
-        // if($markt)
-        // foreach ($markt as $markt1)
-        // {
-        //     dd($markt1);
-        // }
-        // dd($markt->Naam);
-        // return $markt->Naam;
 
         // Koppel_standhouders_markten
         // protected $fillable = ['markt_id', 'standhouder_id', 'type', 'kraam', 'grondplek', 'bedrag', 'betaald'];
@@ -78,21 +62,11 @@ class AanmeldController extends Controller
         $koppel_standhouders_markten->betaald = 0;
         $koppel_standhouders_markten->stroom = 0;
 
+        foreach ($request->producten as $product)
+        {
+            $koppel_standhouders_markten->$product = 1;
+        }
         $koppel_standhouders_markten->save();
-
-        // $array = [];
-        // $array['bedrijfsnaam'] = $request->bedrijfsnaam;
-        // $array['voornaam'] = $request->voornaam;
-        // $array['achternaam'] = $request->achternaam;
-        // $array['straat'] = $request->straat;
-        // $array['postcode'] = $request->postcode;
-        // $array['woonplaats'] = $request->woonplaats;
-        // $array['land'] = $request->land;
-        // $array['telefoon'] = $request->telefoon;
-        // $array['email'] = $request->email;
-        // $array['website'] = $request->website;
-        // $array['typeplek'] = $request->typeplek;
-        // $array['producten'] = $request->producten;
 
         return header("HTTP/1.1 200 OK");
     }

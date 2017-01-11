@@ -14,7 +14,30 @@ class Koppel_standhouders_markten extends Model
      *
      * @var array
      */
-    protected $fillable = ['markt_id', 'standhouder_id', 'type', 'kraam', 'grondplek', 'bedrag', 'betaald'];
+    protected $fillable = [
+                'markt_id',
+                'standhouder_id',
+                'type',
+                'kraam',
+                'grondplek',
+                'bedrag',
+                'betaald',
+                'grote-maten',
+                'dames-kleding',
+                'heren-kleding',
+                'kinder-kleding',
+                'baby-kleding',
+                'fashion-accessoires',
+                'schoenen',
+                'lifestyle',
+                'woon-accessoires',
+                'kunst',
+                'sieraden',
+                'tassen',
+                'brocante',
+                'dierenspullen',
+                'anders'
+            ];
 
 
 
