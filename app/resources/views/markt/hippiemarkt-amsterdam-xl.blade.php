@@ -29,7 +29,7 @@
                     e.stopPropagation();
                     $.ajax({
         				type: "POST",
-        				url: "http://app.directevenementen.dev/aanmelding/markt",
+        				url: "/aanmelding/markt",
         				data: $(".test-form").serialize(),
         				//beforeSend: function() {
         				//	$('#result').html('<img src="loading.gif" />');
