@@ -18,13 +18,14 @@ class AanmeldController extends Controller
      */
     public function postAanmelding(Request $request)
     {
-        $required = ['bedrijfsnaam', 'voornaam', 'achternaam', 'straat', 'postcode', 'huisnummer', 'woonplaats', 'telefoon', 'email', 'foodNonfood'];
+        $required = ['bedrijfsnaam', 'voornaam', 'achternaam', 'straat', 'postcode', 'huisnummer', 'woonplaats', 'telefoon', 'email'];
         $allValues = ['bedrijfsnaam', 'voornaam', 'achternaam', 'straat', 'postcode', 'huisnummer', 'toevoeging', 'woonplaats', 'telefoon', 'email', 'website', 'kramen', 'grondplekken', 'foodNonfood'];
         $arrayedValues = ['producten'];
 
         for($x = 0; $x < count($required); $x++){
             $text = "". $required[$x];
             if(strlen($request->$text) < 2){
+                return $text;
                 abort(503);
             }
         }
@@ -67,6 +68,30 @@ class AanmeldController extends Controller
             $koppel_standhouders_markten->$product = 1;
         }
         $koppel_standhouders_markten->save();
+
+        $msg = "<h1>Bedankt voor uw aanmelding!</h1>
+                <br>
+                <br>
+                U bent aangemeld voor de:
+                <br>
+                Hippiemarkt Amsetrdam XL op Zondag 26 maart 2017, Osdorpplein.
+                <br>
+                <br>
+                We hebben uw bericht in goede orde ontvangen, we sturen
+                <br>
+                u zo spoedig mogelijk nadere informatie over het event!
+                <br>
+                <br>
+                Hou de FacebookPagina in de gaten voor verdere updates
+                <br>
+                <br>
+                @HippiemarktAmsterdamXL";
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg,70);
+
+        // send email
+        mail($request->email,"Aanmelding Ontvangen",$msg);
 
         return header("HTTP/1.1 200 OK");
     }
