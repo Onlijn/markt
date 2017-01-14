@@ -134,7 +134,7 @@ body {
 
 .bord {
     width: 590px;
-    max-width: 60%;
+    max-width: 80%;
     max-height: 80%;
     position: absolute;
     top: 0px;
@@ -444,7 +444,7 @@ body {
         -ms-transform: translateX(0px);
         -o-transform: translateX(0px);
         transform: translateX(0px);
-        top: 15px;
+        top: 55px;
         left: 5px;
         font-size: 25px;
     }
@@ -457,7 +457,7 @@ body {
         -ms-transform: translateX(0px);
         -o-transform: translateX(0px);
         transform: translateX(0px);
-        top: 100px;
+        top: 140px;
         left: 5px;
         font-size: 25px;
     }
@@ -472,11 +472,14 @@ body {
         -ms-transform: rotate(20deg) translateX(0px);
         -o-transform: rotate(20deg) translateX(0px);
         transform: rotate(20deg) translateX(0px);
-        top: 67px;
+        top: 120px;
         right: 16px;
         font-size: 40px;
     }
-    .xl-inner { margin-left: 5px; margin-top: 1px; }
+    .xl-inner {
+        margin-left: 5px;
+        margin-top: 1px;
+    }
     .aanmelden {
         position: absolute;
         left: 50%;
@@ -516,15 +519,23 @@ body {
     .button-section { text-align: center; }
 }
 
+@media screen and (max-width: 321px) and (min-width:319px)
+{
+    .datum { top: 25px; }
+    .kramen { top: 110px; }
+    .xl { top: 100px; right: 2px; }
+    .footer { top: 210px; }
+}
+
 @media screen and (min-width:1024px)
 {
     .logo { width: 500px; }
     .footer { top:508px; }
 }
 
-@media screen and (max-width: 767px) and (min-height:550px)
+@media screen and (max-width: 767px) and (min-height:550px) /* iphone 6 plus */
 {
-    .footer { top: 195px; }
+    .footer { top: 280px; font-size: 13px; }
 }
 
 .aanmelden.landscape {

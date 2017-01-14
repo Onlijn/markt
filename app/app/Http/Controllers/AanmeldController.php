@@ -24,7 +24,7 @@ class AanmeldController extends Controller
 
         for($x = 0; $x < count($required); $x++){
             $text = "". $required[$x];
-            if(strlen($request->$text) < 2){
+            if(($text == "huisnummer" && strlen($request->$text) < 1) || strlen($request->$text) < 2){
                 return $text;
                 abort(503);
             }
