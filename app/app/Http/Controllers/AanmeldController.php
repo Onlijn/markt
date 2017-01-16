@@ -24,8 +24,8 @@ class AanmeldController extends Controller
 
         for($x = 0; $x < count($required); $x++){
             $text = "". $required[$x];
-            if(($text == "huisnummer" && strlen($request->$text) < 1)){
-                return $text;
+            if(($text == "huisnummer" && strlen($request->$text) < 1) || ($text != "huisnummer" && strlen($request->$text) < 2)){
+
                 abort(503);
             }
         }
@@ -63,9 +63,11 @@ class AanmeldController extends Controller
         $koppel_standhouders_markten->betaald = 0;
         $koppel_standhouders_markten->stroom = 0;
 
-        foreach ($request->producten as $product)
-        {
-            $koppel_standhouders_markten->$product = 1;
+        if(isset($request->producten)){
+            foreach ($request->producten as $product)
+            {
+                $koppel_standhouders_markten->$product = 1;
+            }
         }
         $koppel_standhouders_markten->save();
 
@@ -74,7 +76,7 @@ class AanmeldController extends Controller
                 <br>
                 U bent aangemeld voor de:
                 <br>
-                Hippiemarkt Amsetrdam XL op Zondag 26 maart 2017, Osdorpplein.
+                Hippiemarkt Amsterdam XL op Zondag 26 maart 2017, Osdorpplein.
                 <br>
                 <br>
                 We hebben uw bericht in goede orde ontvangen, we sturen

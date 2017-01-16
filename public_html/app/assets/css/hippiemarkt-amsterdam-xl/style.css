@@ -515,7 +515,7 @@ body {
     .form-style-10 .section span { margin-left: 0px; left: 10px; }
     .form-style-10 .section { text-align: center; }
     .close { position: fixed; top: 20px; z-index: 10; }
-    .test-form input[type="submit"] { -webkit-appearance: none; margin-bottom: 20px; }
+    .test-form input[type="submit"], .test-form input[type="button"] { -webkit-appearance: none; margin-bottom: 20px; }
     .button-section { text-align: center; }
 }
 
@@ -674,11 +674,6 @@ body {
         -o-transform: translateX(310px);
         transform: translateX(310px);
     }
-}
-
-input.error {
-    border: 1px solid red !important;
-    background: rgba(255, 0, 0, 0.12);
 }
 
 @-webkit-keyframes swing2

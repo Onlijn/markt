@@ -73,8 +73,8 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar" style="position: absolute;">
             <ul class="nav nav-sidebar">
-                <li class="markt-overview active">Overzicht <span class="sr-only">(current)</span></li>
-                <li class="markt-aanmeldingen">Aanmeldingen <span class="sr-only"></span></li>
+                <li class="markt-overview active"><a href="/markten/{{ $data['slug'] }}">Overzicht <span class="sr-only">(current)</span></a></li>
+                <li class="markt-aanmeldingen"><a href="/markten/{{ $data['slug'] }}/aanmeldingen">Aanmeldingen <span class="sr-only"></span></a></li>
                 <li class="markt-geselecteerd">Geselecteerd <span class="sr-only"></span></li>
                 <li class="markt-betaald">Betaald <span class="sr-only"></span></li>
                 <li class="markt-openstaand">Openstaand <span class="sr-only"></span></li>
@@ -86,8 +86,9 @@
 
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <div style="max-width: 100%;height: auto;">125</div>
+                    <div style="max-width: 100%;height: auto;">{{ $data['aantal_standhouders'] }}</div>
                     <h4>Aantal aanmeldingen</h4>
+
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -100,7 +101,7 @@
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
                     <h4>Aantal vrije plekken van totaal</h4>
-                    <span class="text-muted">23 van 70</span>
+                    <span class="text-muted">{{ $data['markt']->aantalGeselecteerd }} van {{ $data['markt']->aantalPlekken }}</span>
                 </div>
             </div>
 
@@ -138,6 +139,20 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        	foreach($data['standhouders'] as $standhouder)
+                            {
+                                // dd($standhouder);
+                                echo '<tr>';
+                                echo '<td>' . $standhouder->id . '</td>';
+                                echo '<td>' . $standhouder->Bedrijfsnaam . '</td>';
+                                echo '<td>' . $standhouder->Voornaam . " " . $standhouder->Achternaam . '</td>';
+                                echo '<td>' . $standhouder->Telefoon . '</td>';
+                                echo '<td>' . $standhouder->Email . '</td>';
+                                echo '<td>' . $standhouder->Website . '</td>';
+                                echo '</tr>';
+                            }
+                        ?>
                     </tbody>
                 </table>
             </div>

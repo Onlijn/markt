@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hippie markt de ronde venen</title>
+		<title>Hippiemarkt Amsterdam XL</title>
 
 		<!-- FONTS -->
 		<!-- <link rel="stylesheet" type="text/css" href="css/fonts/stylesheet.css"> -->
@@ -17,6 +17,17 @@
 		<!-- JS -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script src="/assets/js/hippiemarkt-amsterdam-xl.js"></script>
+
+		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  			ga('create', 'UA-90347468-1', 'auto');
+  			ga('send', 'pageview');
+
+		</script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	</head>
@@ -61,148 +72,7 @@
 
         <div class="form-wrapper">
 			<div class="close"></div>
-            <!-- <form class="test-form" action="test.php" method="post">
-                <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-                <input type="hidden" name="markt_id" value="2" />
-                <table>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Bedrijfsnaam*</label>
-                        </td>
-                        <td>
-                            <input name="bedrijfsnaam" class="field" type="text" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Voornaam*</label>
-                        </td>
-                        <td>
-                            <input name="voornaam" class="required field" type="text" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Achternaam*</label>
-                        </td>
-                        <td>
-                            <input name="achternaam" class="required field" type="text" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Straat*</label>
-                        </td>
-                        <td>
-                            <input name="straat" class="field" type="text" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Huisnummer*</label>
-                        </td>
-                        <td>
-                            <input name="huisnummer" class="field number-field" type="tel" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Toevoeging</label>
-                        </td>
-                        <td>
-                            <input name="toevoeging" class="field" type="text">
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>postcode*</label>
-                        </td>
-                        <td>
-                            <input name="postcode" class="field" type="text" maxlength="10" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Woonplaats*</label>
-                        </td>
-                        <td>
-                            <input name="woonplaats" class="field" class="required" type="text" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Telefoon*</label>
-                        </td>
-                        <td>
-                            <input name="telefoon" class="field" class="required number-field" type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>E-mail*</label>
-                        </td>
-                        <td>
-                            <input type="email" class="required field" name="email" placeholder="info@hippiemarktderondevenen.nl" required>
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Website</label>
-                        </td>
-                        <td>
-                            <input name="website" class="field" type="text">
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Food/non food*</label>
-                        </td>
-                        <td>
-                            <input type="radio" name="foodNonfood" value="food" checked="checked" />food<span style="display:inline-block;width:20px;"></span>
-                            <input type="radio" name="foodNonfood" value="nonfood" checked="checked" />non food
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Kramen</label>
-                        </td>
-                        <td>
-                            <input name="kramen" class="field" type="number" value="0">
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Grondplekken</label>
-                        </td>
-                        <td>
-                            <input name="grondplekken" class="field" type="number" value="0">
-                        </td>
-                    </tr>
-                    <tr class="verkoper">
-                        <td>
-                            <label>Producten*</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" class="producten" name="producten[0]" value="grote-maten">Grote maten kleding<br>
-                            <input type="checkbox" class="producten" name="producten[1]" value="dames-kleding">Dameskleding<br>
-                            <input type="checkbox" class="producten" name="producten[2]" value="heren-kleding">Herenkleding<br>
-                            <input type="checkbox" class="producten" name="producten[3]" value="kinder-kleding">Kinderkleding<br>
-                            <input type="checkbox" class="producten" name="producten[4]" value="baby-kleding">Babykleding<br>
-                            <input type="checkbox" class="producten" name="producten[5]" value="fashion-accesoires">Kledingaccesoires<br>
-                            <input type="checkbox" class="producten" name="producten[6]" value="schoenen">Schoenen<br>
-                            <input type="checkbox" class="producten" name="producten[7]" value="lifestyle">Lifestyle<br>
-                            <input type="checkbox" class="producten" name="producten[8]" value="woon-accessoires">Woonaccessoires<br>
-                            <input type="checkbox" class="producten" name="producten[9]" value="kunst">Kunst<br>
-                            <input type="checkbox" class="producten" name="producten[10]" value="sieraden">Sieraden<br>
-                            <input type="checkbox" class="producten" name="producten[11]" value="tassen">Tassen<br>
-                            <input type="checkbox" class="producten" name="producten[12]" value="brocante">Brocante<br>
-                            <input type="checkbox" class="producten" name="producten[13]" value="dierenspullen">Dierenspullen<br>
-                            <input type="checkbox" class="producten" name="producten[14]" value="anders">Anders
-                        </td>
-                    </tr>
-                </table>
-                <input type="submit" class="submit-button">
-            </form> -->
+            
 			<div class="form-style-10">
 				<h1>Aanmelden Hippiemarkt Amsterdam XL<span>Hier kunt u zich aanmelden als standhouder voor de Hippiemarkt Amsterdam XL.</span></h1>
 				<form class="test-form" action="test.php" method="post">
@@ -235,8 +105,8 @@
 							<span style="display:inline-block;width:20px;"></span>
                             <input type="radio" name="foodNonfood" value="non-food" checked="checked">non food
 						</label>
-				        <label>Kramen (4 meter): <input type="number" name="kramen" value="0"/></label>
-				        <label>Grondplekken (4 meter): <input type="number" name="grondplekken" value="0"/></label>
+				        <label>Kramen (4 meter, &euro;75,- incl. BTW): <input type="number" name="kramen" value="0"/></label>
+				        <label>Grondplekken (4 meter, &euro;65,- incl. BTW): <input type="number" name="grondplekken" value="0"/></label>
 				        <div class="form-label">
 							Producten*:<br>
 							<label><input type="checkbox" class="producten" name="producten[0]" value="grote-maten">Grote maten kleding</label>
@@ -257,15 +127,11 @@
 						</div>
 				    </div>
 				    <div class="button-section">
-				     	<input type="submit" name="Aanmelden" value="aanmelden"/>
+				     	<input type="button" name="Aanmelden" value="aanmelden"/>
 				    </div>
 				</form>
 			</div>
         </div>
 
-        <!-- <pre>
-            <div class="output">
-            </div>
-        </pre> -->
 	</body>
 </html>

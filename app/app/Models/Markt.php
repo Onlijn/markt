@@ -14,7 +14,7 @@ class Markt extends Model
      *
      * @var array
      */
-    public $fillable = ['Naam', 'Datum', 'van-tijd', 'tot-tijd', 'Website', 'Adres', 'Huisnummer', 'Toevoeging', 'Postcode', 'Plaats', 'Land', 'bedrag_grondplek', 'bedrag_kraam'];
+    public $fillable = ['Naam', 'Datum', 'van-tijd', 'tot-tijd', 'Website', 'Adres', 'Huisnummer', 'Toevoeging', 'Postcode', 'Plaats', 'Land', 'bedrag_grondplek', 'bedrag_kraam', 'aantalPlekken', 'aantalGeselecteerd'];
 
     /**
      * Get all of the standhouders for the markt.
@@ -23,16 +23,6 @@ class Markt extends Model
     {
         return $this->hasManyThrough('Standhouder', 'Koppel_standhouders_markten',
                                     'markt_id', 'id', 'id');
-    }
-
-    public function retrieveModel()
-    {
-        return $this;
-    }
-
-    public function getName()
-    {
-        return $this->Naam;
     }
 
 }

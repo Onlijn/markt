@@ -36,7 +36,9 @@ class Koppel_standhouders_markten extends Model
                 'tassen',
                 'brocante',
                 'dierenspullen',
-                'anders'
+                'anders',
+                'seen',
+                'selected'
             ];
 
 

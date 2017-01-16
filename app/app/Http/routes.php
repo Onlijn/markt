@@ -41,6 +41,10 @@ Route::group(['middleware' => 'auth'], function()
 	       return View('users.dashboard');
 	}));
 
+    Route::get('markten/{slug}/export', 'MarktenController@exportAllStandhoudersForMarkt');
+
+
+    Route::get('markten/{slug}/aanmeldingen', 'MarktenController@getMarktAanmeldingen');
     Route::get('markten/{slug}', 'MarktenController@getMarkt');
     Route::get('markten', 'MarktenController@getIndex');
 
